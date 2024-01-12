@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.zdjecie {
+    height: 600px;
+    width: 400px;
+    display: inline-block;
+    margin: 25px;
+    user-select: none;
+    flex-shrink: 0; /* Zapobiegaj zmniejszaniu obrazów */
+}
+
+.zdjecie img {
+    height: 100%; /* Ustawienie wysokości obrazu na 100% */
+    width: 100%; /* Ustawienie szerokości obrazu na 100% */
+    object-fit: cover; /* Skalowanie obrazu, aby wypełnić kontener */
+}
+
+.image-container {
+    display: flex;
+    overflow: hidden; /* Ukryj obrazy, które są poza widokiem */
+    transition: transform 1s ease;
+    justify-content: space-between; /* Równomierne rozmieszczenie elementów */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    margin-left: 65px; /* Dostosuj margines od lewej krawędzi */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.controls button {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Dodaj kwadrat na przycisku */
+.controls button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Pokaż kwadrat po najechaniu na przycisk */
+.controls button:hover::before,
+.controls button:active::before {
+    width: 30px;
+    height: 30px;
+}
+
+/* Stylizacja przycisków */
+#prevButton {
+    margin-left: 10px; /* Dodaj odstęp od lewej krawędzi */
+}
+
+#nextButton {
+    margin-right: 10px; /* Dodaj odstęp od prawej krawędzi */
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.left-content img {
+    max-width: 100%; /* Zapewnia, że obraz nie przekroczy szerokości kontenera */
+    height: auto; /* Zachowuje proporcje obrazu */
+}
+
+.right-content {
+    max-width: 60%; /* Maksymalna szerokość dla prawej strony */
+}
+
+.right-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.right-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.right-content img {
+    display: none; /* Ukryj zdjęcie na stronie z danymi */
+}
+
+
+
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+

@@ -1,0 +1,15 @@
+pod zdjećiem na dole albo w dolnej części zdjecia nazwa i lub cena
+baza nowa tabela z rozmiar, ilosć, może kolor,
+link loga estereg
+klikanie zdjecia na strone przenosi z danym typem
+linki kategorii
+stopka
+koszyk
+dla moderatora dodawnanie nowych rzeczy
+w przyszlosci jakieś filtorwanie/ wyszykiwanie
+walidacja podczas rjestracji email
+
+
+a i może js na zmienienie na rejstracje
+powtózenie hasła
+rejestracj do poprawy
