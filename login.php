@@ -79,7 +79,7 @@
     <input type="password" class="form-control" id="haslo" placeholder="Wprowadź hasło" name="haslo" required>
     </div>
     <div class="form-group">
-    <input type="password" class="form-control"  placeholder="Powtórz hasło"  name="haslo-potw" required>
+    <input type="password" class="form-control"  placeholder="Powtórz hasło"  name="haslo_potw" required>
     </div>
   </div>
     <input type="submit" name="register" class="button" value="Zarejestruj">

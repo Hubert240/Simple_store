@@ -1,0 +1,42 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 30%; /* Ustaw szerokość produktu na 30% szerokości kontenera */
+    margin-bottom: 20px; /* Dodaj odstęp na dole */
+    text-align: center; /* Wyśrodkuj zawartość wewnątrz bloku .product */
+}
+
+.product img {
+    width: 100%; /* Ustaw stałą szerokość obrazu na 100% szerokości .product */
+    height: auto; /* Zachowaj proporcje wysokości */
+}
+
+.product h2 {
+    margin-top: 10px; /* Dodaj odstęp na górze dla nazwy produktu */
+}
+
+
+.zdjecie {
+    height: 600px;
+    width: 400px;
+    display: inline-block;
+    margin: 30px;
+    user-select: none;
+    flex-shrink: 0; /* Zapobiegaj zmniejszaniu obrazów */
+}
+
+.zdjecie img {
+    height: 100%; /* Ustawienie wysokości obrazu na 100% */
+    width: 100%; /* Ustawienie szerokości obrazu na 100% */
+    object-fit: cover; /* Skalowanie obrazu, aby wypełnić kontener */
+}
+
+/* Dostosuj styl dla obrazów w innych miejscach, jeśli są inne */
+.inny-selektor img {
+    height: 600px;
+    width: 400px;
+    object-fit: cover;
+}

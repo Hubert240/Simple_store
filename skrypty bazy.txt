@@ -69,3 +69,25 @@ VALUES
   (9, 'M', 35),
   (10, 'L', 25),
   (10, 'M', 10);
+
+  CREATE TABLE koszyki (
+    id SERIAL PRIMARY KEY,
+    uzytkownik_id INT,
+    FOREIGN KEY (uzytkownik_id) REFERENCES uzytkownicy(id)
+);
+
+
+CREATE TABLE elementy_koszyka (
+    id SERIAL PRIMARY KEY,
+    koszyk_id INT,
+    produkt_id INT,
+    ilosc INT,
+    FOREIGN KEY (koszyk_id) REFERENCES koszyki(id),
+    FOREIGN KEY (produkt_id) REFERENCES ubrania(id)
+);
+
+
+INSERT INTO koszyki (uzytkownik_id) VALUES (1) RETURNING id;
+
+
+INSERT INTO elementy_koszyka (koszyk_id, produkt_id, ilosc) VALUES (1, 1, 1);

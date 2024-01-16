@@ -72,7 +72,7 @@ $dbconn = pg_connect($connection_string);
         }
 
         .login img {
-            margin-right: 30px;
+            margin-right: 100px;
             width: 60px;
             height: auto;
         }
@@ -83,7 +83,7 @@ $dbconn = pg_connect($connection_string);
             margin-right: 30px;
         }
         .loged img {
-            margin-left: 580%;
+            margin-left: 480%;
             width: 60px;
             height: auto;
         }

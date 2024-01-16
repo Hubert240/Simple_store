@@ -12,7 +12,7 @@ if (!$conn) {
     exit;
 }
 
-$query = "SELECT * FROM ubrania ORDER BY data_dodania DESC LIMIT 8";
+$query = "SELECT * FROM ubrania ORDER BY data_dodania DESC LIMIT 6";
 $result = pg_query($conn, $query);
 
 if (!$result) {
