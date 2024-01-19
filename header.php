@@ -52,7 +52,17 @@ $dbconn = pg_connect($connection_string);
         .second-top-bar button:hover {
             color: #000;
         }
-
+        .napis img{
+            width: 500px;
+            height: auto;
+            margin-left:20px;
+            user-select: none;
+        }
+        .login img {
+            margin-right: 50px;
+            width: 60px;
+            height: auto;
+        }
         .logo {
             margin-left: 30px;
             user-select: none;
@@ -64,18 +74,6 @@ $dbconn = pg_connect($connection_string);
         }
 
 
-        .napis img{
-            width: 500px;
-            height: auto;
-            margin-right: 40px;
-            user-select: none;
-        }
-
-        .login img {
-            margin-right: 100px;
-            width: 60px;
-            height: auto;
-        }
 
         .logout img {
             width: 60px;
@@ -83,7 +81,7 @@ $dbconn = pg_connect($connection_string);
             margin-right: 30px;
         }
         .loged img {
-            margin-left: 480%;
+            margin-left: 250%;
             width: 60px;
             height: auto;
         }
@@ -93,6 +91,12 @@ $dbconn = pg_connect($connection_string);
             height: auto;
             margin-left: 40%;
             user-select: none;
+        }
+
+        .koszyk img{
+            width: 60px;
+            height: auto;
+            margin-left: 500%;
         }
     </style>
 </head>
@@ -109,6 +113,9 @@ $dbconn = pg_connect($connection_string);
 if (isset($_SESSION['id'])) {
         echo '<a href="hello.php" class="lognapis">';
         echo '<img src="logo/napis.png" alt="lognapis">';
+        echo '</a>';
+        echo '<a href="koszyk.php" class="koszyk">';
+        echo '<img src="logo/koszyk.png" alt="koszyk">';
         echo '</a>';
         echo '<a href="login.php" class="loged">';
         echo '<img src="logo/login.png" alt="loged">';

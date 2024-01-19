@@ -30,7 +30,9 @@ if (!$result) {
 </head>
 <body>
 
-
+<div class="zobacz-produkty">
+        <a href="produkty.php">Zobacz wszystkie produkty</a>
+    </div>
 
 <div class="image-container">
     <?php

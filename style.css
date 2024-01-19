@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
@@ -124,5 +123,36 @@ input {
     padding: 8px;
     margin-bottom: 10px;
 }
+
+
+.zobacz-produkty {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    user-select: none;
+    justify-content: center; 
+    align-items: center;
+}
+
+.zobacz-produkty a {
+    text-decoration: none;
+    display: block; /* Dodatkowy styl, który pomoże w wyśrodkowaniu linku */
+    line-height: 1.5; /* Dostosuj wysokość linii, aby wyśrodkować tekst w pionie */
+    color: rgb(37, 33, 33); /* Dodaj kolor tekstu, jeśli to konieczne */
+}
+
+.zobacz-produkty:hover {
+    background-color: #282626;
+    color:white;
+}
+
+.zobacz-produkty:hover a{
+    color:white;
+}
+
 
 
