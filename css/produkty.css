@@ -4,18 +4,18 @@
 }
 
 .product {
-    width: 30%; /* Ustaw szerokość produktu na 30% szerokości kontenera */
-    margin-bottom: 20px; /* Dodaj odstęp na dole */
-    text-align: center; /* Wyśrodkuj zawartość wewnątrz bloku .product */
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .product img {
-    width: 100%; /* Ustaw stałą szerokość obrazu na 100% szerokości .product */
-    height: auto; /* Zachowaj proporcje wysokości */
+    width: 100%;
+    height: auto;
 }
 
 .product h2 {
-    margin-top: 10px; /* Dodaj odstęp na górze dla nazwy produktu */
+    margin-top: 10px;
 }
 
 
@@ -25,16 +25,16 @@
     display: inline-block;
     margin: 30px;
     user-select: none;
-    flex-shrink: 0; /* Zapobiegaj zmniejszaniu obrazów */
+    flex-shrink: 0;
 }
 
 .zdjecie img {
-    height: 100%; /* Ustawienie wysokości obrazu na 100% */
-    width: 100%; /* Ustawienie szerokości obrazu na 100% */
-    object-fit: cover; /* Skalowanie obrazu, aby wypełnić kontener */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-/* Dostosuj styl dla obrazów w innych miejscach, jeśli są inne */
+
 .inny-selektor img {
     height: 600px;
     width: 400px;

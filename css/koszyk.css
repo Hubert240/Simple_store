@@ -21,9 +21,9 @@
     background-color: #f5f5f5;
 }
 
-/* Dodatkowe style dla przycisków */
+
 form {
-    display: inline-block; /* Aby przyciski były obok siebie */
+    display: inline-block;
     margin-right: 5px;
 }
 

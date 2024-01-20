@@ -9,22 +9,22 @@ body {
     display: inline-block;
     margin: 30px;
     user-select: none;
-    flex-shrink: 0; /* Zapobiegaj zmniejszaniu obrazów */
+    flex-shrink: 0;
 }
 
 .zdjecie img {
-    height: 100%; /* Ustawienie wysokości obrazu na 100% */
-    width: 100%; /* Ustawienie szerokości obrazu na 100% */
-    object-fit: cover; /* Skalowanie obrazu, aby wypełnić kontener */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .image-container {
     display: flex;
-    overflow: hidden; /* Ukryj obrazy, które są poza widokiem */
+    overflow: hidden; 
     transition: transform 1s ease;
-    justify-content: space-between; /* Równomierne rozmieszczenie elementów */
-    align-items: center; /* Wyśrodkowanie w pionie */
-    margin-left: 86px; /* Dostosuj margines od lewej krawędzi */
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 86px;
 }
 
 .controls {
@@ -33,7 +33,6 @@ body {
     position: absolute;
     top: 50%;
     width: 100%;
-    transform: translateY(-50%);
     user-select: none;
 }
 
@@ -45,7 +44,6 @@ body {
     position: relative;
 }
 
-/* Dodaj kwadrat na przycisku */
 .controls button::before {
     content: '';
     position: absolute;
@@ -59,20 +57,18 @@ body {
     transition: width 0.3s ease, height 0.3s ease;
 }
 
-/* Pokaż kwadrat po najechaniu na przycisk */
 .controls button:hover::before,
 .controls button:active::before {
     width: 30px;
     height: 30px;
 }
 
-/* Stylizacja przycisków */
 #prevButton {
-    margin-left: 10px; /* Dodaj odstęp od lewej krawędzi */
+    margin-left: 10px;
 }
 
 #nextButton {
-    margin-right: 10px; /* Dodaj odstęp od prawej krawędzi */
+    margin-right: 10px;
 }
 
 .content {
@@ -82,12 +78,12 @@ body {
 }
 
 .left-content img {
-    max-width: 100%; /* Zapewnia, że obraz nie przekroczy szerokości kontenera */
-    height: auto; /* Zachowuje proporcje obrazu */
+    max-width: 100%;
+    height: auto;
 }
 
 .right-content {
-    max-width: 60%; /* Maksymalna szerokość dla prawej strony */
+    max-width: 60%;
 }
 
 .right-content h1 {
@@ -101,10 +97,8 @@ body {
 }
 
 .right-content img {
-    display: none; /* Ukryj zdjęcie na stronie z danymi */
+    display: none; 
 }
-
-
 
 
 .login-container {
@@ -140,9 +134,9 @@ input {
 
 .zobacz-produkty a {
     text-decoration: none;
-    display: block; /* Dodatkowy styl, który pomoże w wyśrodkowaniu linku */
-    line-height: 1.5; /* Dostosuj wysokość linii, aby wyśrodkować tekst w pionie */
-    color: rgb(37, 33, 33); /* Dodaj kolor tekstu, jeśli to konieczne */
+    display: block;
+    line-height: 1.5;
+    color: rgb(37, 33, 33); 
 }
 
 .zobacz-produkty:hover {
@@ -155,7 +149,7 @@ input {
 }
 
 
-.koszyk-button{
+input[type="submit"]{
     display: inline-block;
     padding: 10px 20px;
     background-color: #33ac3f;
@@ -164,11 +158,13 @@ input {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     text-align: center;
+    cursor:pointer;
 }
 
-.koszyk-button:hover {
+input[type="submit"]:hover {
     background-color: #56f76e;
     color: black;
+    cursor:pointer;
 }
 
 

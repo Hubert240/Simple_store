@@ -11,7 +11,8 @@ CREATE TABLE uzytkownicy (
 INSERT INTO uzytkownicy (imie, nazwisko, rola, email, haslo)
 VALUES 
     ('Sebastian', 'Alvarez', 'klient', 'seba@example.com', md5('123')),
-    ('Marian', 'Paździoch', 'moderator', 'marian@example.com', md5('123')),
+    ('Marian', 'Paździoch', 'klient', 'marian@example.com', md5('123')),
+    ('Hubert', 'Adamczak', 'admin', 'hubert@example.com', md5('123')),
     ('Colson', 'Baker', 'admin', 'mgk@example.com', md5('123'));
 
 
@@ -87,7 +88,3 @@ CREATE TABLE elementy_koszyka (
 );
 
 
-INSERT INTO koszyki (uzytkownik_id) VALUES (1) RETURNING id;
-
-
-INSERT INTO elementy_koszyka (koszyk_id, produkt_id, ilosc) VALUES (1, 1, 1);

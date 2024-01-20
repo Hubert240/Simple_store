@@ -6,7 +6,6 @@
 </head>
 <body>
 <?php
-// Sprawdź, czy użytkownik jest zalogowany
 if (isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
 
@@ -31,18 +30,15 @@ if (isset($_SESSION['id'])) {
             </form>";
 
         if (isset($_POST['dodajProdukt'])) {
-            // Pobierz dane z formularza
             $nazwa = $_POST['nazwa'];
             $rodzaj = $_POST['rodzaj'];
             $opis = $_POST['opis'];
             $cena = $_POST['cena'];
 
-            // Przesuń plik z obrazem do folderu na serwerze
             $targetDir = "images/";
             $targetFile = $targetDir . basename($_FILES["zdjecie"]["name"]);
             move_uploaded_file($_FILES["zdjecie"]["tmp_name"], $targetFile);
 
-            // Dodaj nowy produkt do bazy danych
             $queryDodajProdukt = "INSERT INTO ubrania (nazwa, rodzaj, opis, cena, data_dodania, zdjecie)
                                   VALUES ($1, $2, $3, $4, CURRENT_DATE, $5)";
             $params = array($nazwa, $rodzaj, $opis, $cena, $targetFile);
@@ -56,7 +52,6 @@ if (isset($_SESSION['id'])) {
         }
     } 
  else {
-    // Jeśli użytkownik nie jest zalogowany, przekieruj go na stronę logowania
     echo "<p>Użytkownik nie jest zalogowany.</p>";
     header('Location: login.php');
 }

@@ -13,9 +13,8 @@
 
 <div class="image-container">
     <?php
-    // Pobierz obrazy z bazy danych
     $query = "SELECT * FROM ubrania ORDER BY data_dodania DESC LIMIT 6";
-$result = pg_query($dbconn, $query);
+    $result = pg_query($dbconn, $query);
     while ($row = pg_fetch_assoc($result)) {
         $nazwa = $row['nazwa'];
         $zdjecie = $row['zdjecie'];
