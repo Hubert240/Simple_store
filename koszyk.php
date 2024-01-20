@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/koszyk.css">
     <?php include 'header.php'; ?>
 </head>
 <body>
@@ -39,11 +40,11 @@ if (isset($_SESSION['id'])) {
                 if ($result_elementy_koszyka) {
                     if (pg_num_rows($result_elementy_koszyka) > 0) {
                         echo "<h2>Twój koszyk:</h2>";
-                        echo "<table border='1'>
+                        echo "<table class='styled-table'>
                                 <tr>
                                     <th>Nazwa Produktu</th>
-                                    <th>Ilość</th>
-                                    <th>Akcje</th>
+                                    <th>Cena</th>
+                                    <th>Usuwanie</th>
                                 </tr>";
 
                         while ($row_elementy_koszyka = pg_fetch_assoc($result_elementy_koszyka)) {

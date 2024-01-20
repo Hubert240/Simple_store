@@ -1,31 +1,8 @@
-<?php
-$host = "localhost";
-$port = "5432";
-$dbname = "ubranka";
-$user = "postgres";
-$password = "123";
-
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
-
-if (!$conn) {
-    echo "Error: Unable to connect to the database.\n";
-    exit;
-}
-
-$query = "SELECT * FROM ubrania ORDER BY data_dodania DESC LIMIT 6";
-$result = pg_query($conn, $query);
-
-if (!$result) {
-    echo "Error in SQL query: " . pg_last_error($conn);
-    exit;
-}
-
-?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <?php include 'header.php'; ?>
 </head>
 <body>
@@ -37,6 +14,8 @@ if (!$result) {
 <div class="image-container">
     <?php
     // Pobierz obrazy z bazy danych
+    $query = "SELECT * FROM ubrania ORDER BY data_dodania DESC LIMIT 6";
+$result = pg_query($dbconn, $query);
     while ($row = pg_fetch_assoc($result)) {
         $nazwa = $row['nazwa'];
         $zdjecie = $row['zdjecie'];

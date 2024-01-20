@@ -138,8 +138,8 @@ else{
 </div>
 
 <div class="second-top-bar">
-    <button onclick="window.location.href='#koszule'">Koszule</button>
-    <button onclick="window.location.href='#spodnie'">Spodnie</button>
-    <button onclick="window.location.href='#kurtki'">Kurtki</button>
-    <button onclick="window.location.href='#buty'">Buty</button>
+    <button onclick="window.location.href='produkty.php?rodzaj=koszule'">Koszule</button>
+    <button onclick="window.location.href='produkty.php?rodzaj=spodnie'">Spodnie</button>
+    <button onclick="window.location.href='produkty.php?rodzaj=kurtki'">Kurtki</button>
+    <button onclick="window.location.href='produkty.php?rodzaj=buty'">Buty</button>
 </div>

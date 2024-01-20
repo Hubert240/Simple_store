@@ -4,7 +4,7 @@ html, body {
   }
   
   body {
-    background-image: url('logo/background.png');
+    background-image: url('/logo/background.png');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -17,6 +17,7 @@ h1 {
 
 .container {
     text-align: center;
+    height: 60%;
   
   }
   
@@ -24,12 +25,12 @@ h1 {
     display: inline-block;
     text-align: left;
     padding: 80px;
-    margin-top: 10%;
+    margin-top: 5%;
     border-radius: 8px;
     transition: width 0.5s ease;
     backdrop-filter: blur(10px);
     border: 2px solid #a58700;
-    border-radius: 10px;
+    border-radius: 5px;
     user-select: none;
     
   }
@@ -39,12 +40,12 @@ h1 {
     display:  inline-block;
     text-align: left;
     padding: 80px;
-    margin-top: 5%;
+    margin-top: 5px;
     border-radius: 8px;
     transition: width 0.5s ease;
     backdrop-filter: blur(10px);
     border: 2px solid #a58700;
-    border-radius: 10px;
+    border-radius: 5px;
     user-select: none;
     
   }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <?php include 'header.php'; ?>
 </head>
 <body>
@@ -16,7 +16,7 @@
     if (isset($_GET['nazwa'])) {
         // Pobierz nazwę produktu z URL
         $nazwaProduktu = $_GET['nazwa'];
-        $user_id = $_SESSION['id'];
+        
         // Przygotuj zapytanie SQL z parametrami
         $query = "SELECT * FROM ubrania WHERE nazwa = $1";
 
@@ -36,8 +36,8 @@
             echo "<h1>{$row['nazwa']}</h1>";
             echo "<p>{$row['opis']}</p>";
             echo "<p>Cena: {$row['cena']}</p>";
-            echo "<div class='koszyk-button'>";
-            echo "<button onclick='dodajDoKoszyka()'>Dodaj do koszyka</button>";
+            echo "<div >";
+            echo "<button onclick='dodajDoKoszyka()' class='koszyk-button'>Dodaj do koszyka</button>";
             echo "</div>";
             echo "</div>";
             
@@ -56,6 +56,7 @@ function dodajDoKoszyka() {
        
        <?php
            // Sprawdź, czy użytkownik ma już koszyk
+           $user_id = $_SESSION['id'];
            $queryCheckBasket = "SELECT id FROM koszyki WHERE uzytkownik_id = $1";
            $paramsCheckBasket = array($user_id);
            $resultCheckBasket = pg_query_params($dbconn, $queryCheckBasket, $paramsCheckBasket);
